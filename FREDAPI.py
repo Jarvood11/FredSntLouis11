@@ -1,0 +1,12 @@
+from fredapi import Fred
+fred = Fred(api_key='d7126efee9a078f7d82ef0c3e23da06a')
+#data = fred.get_series('SP500')
+#print(data)
+data = fred.get_series_first_release('GDP')
+#print(data)
+last = fred.get_series_latest_release('GDP')
+wall=fred.get_series_as_of_date('GDP', '6/1/2014')
+#print(last)
+#print(wall)
+flast=fred.get_series_as_of_date('GDP', '11/20/2023')
+print(flast)
